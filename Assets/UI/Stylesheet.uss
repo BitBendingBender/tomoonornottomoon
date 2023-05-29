@@ -1,0 +1,131 @@
+.unity-label {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+.state-menu #title-screen {
+    opacity: 1;
+}
+
+.state-menu #ingame-screen {
+    opacity: 0;
+}
+
+.state-menu #gameover-screen {
+    opacity: 0;
+}
+
+.state-ingame #ingame-screen {
+    opacity: 1;
+}
+
+.state-ingame #gameover-screen {
+    opacity: 0;
+}
+
+.state-ingame #title-screen {
+    opacity: 0;
+}
+
+.state-gameover #gameover-screen {
+    opacity: 1;
+}
+
+.state-gameover #title-screen {
+    opacity: 0;
+}
+
+.state-gameover #ingame-screen {
+    opacity: 0;
+}
+
+#three-lives {
+    transition-property: opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+#two-lives {
+    transition-property: opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+#one-live {
+    transition-property: opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+#no-lives {
+    transition-property: opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+.three-lives #two-lives {
+    opacity: 0;
+}
+
+.three-lives #one-live {
+    opacity: 0;
+}
+
+.three-lives #no-lives {
+    opacity: 0;
+}
+
+.three-lives #three-lives {
+    opacity: 1;
+}
+
+.two-lives #three-lives {
+    opacity: 0;
+}
+
+.two-lives #one-live {
+    opacity: 0;
+}
+
+.two-lives #no-lives {
+    opacity: 0;
+}
+
+.two-lives #two-lives {
+    opacity: 1;
+}
+
+.one-live #three-lives {
+    opacity: 0;
+}
+
+.one-live #two-lives {
+    opacity: 0;
+}
+
+.one-lives #no-lives {
+    opacity: 0;
+}
+
+.one-lives #one-live {
+    opacity: 1;
+}
+
+.no-lives #three-lives {
+    opacity: 0;
+}
+
+.no-lives #two-lives {
+    opacity: 0;
+}
+
+.no-lives #one-live {
+    opacity: 0;
+}
+
+.no-lives #no-lives {
+    opacity: 1;
+}
+
+.three-lives {
+}

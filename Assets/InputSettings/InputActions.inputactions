@@ -1,0 +1,90 @@
+{
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "ingame",
+            "id": "5e19e7d4-b950-45a1-952f-dd82a932ebdd",
+            "actions": [
+                {
+                    "name": "mooning",
+                    "type": "Value",
+                    "id": "c303e1ff-f676-4dce-9c04-353dee8758f8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ff49f0da-b3f2-44bc-bcdc-86fd3a5e01c9",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "mooning",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "menu",
+            "id": "707a3d55-9408-472b-b306-0e685509a4f3",
+            "actions": [
+                {
+                    "name": "startgame",
+                    "type": "Value",
+                    "id": "ecffb906-a466-4a60-bc4c-aeb08448fbfa",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "79438350-51ab-4ef5-a773-a63af29e2d5f",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "startgame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "gameover",
+            "id": "bc5d8d30-eea2-4212-ab11-695db9d68e78",
+            "actions": [
+                {
+                    "name": "startgame",
+                    "type": "Value",
+                    "id": "af61e511-5655-450f-8689-bc4bd4825fa2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "09f438b1-acc2-4d68-b419-9a840a824652",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "startgame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
