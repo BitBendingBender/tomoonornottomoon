@@ -50,19 +50,19 @@ namespace TheMoon {
 
             switch(type) {
                 case TextureType.Moontastic:
-                    meshRenderer.material.SetTexture("_MainTex", moontastic);
+                    meshRenderer.material.SetTexture("_BaseMap", moontastic);
                     break;
                 case TextureType.Nice:
-                    meshRenderer.material.SetTexture("_MainTex", nice);
+                    meshRenderer.material.SetTexture("_BaseMap", nice);
                     break;
                 case TextureType.Okay:
-                    meshRenderer.material.SetTexture("_MainTex", okay);
+                    meshRenderer.material.SetTexture("_BaseMap", okay);
                     break;
                 case TextureType.Close:
-                    meshRenderer.material.SetTexture("_MainTex", close);
+                    meshRenderer.material.SetTexture("_BaseMap", close);
                     break;
                 case TextureType.Duh:
-                    meshRenderer.material.SetTexture("_MainTex", duh);
+                    meshRenderer.material.SetTexture("_BaseMap", duh);
                     break;
             }
 

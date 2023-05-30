@@ -27,7 +27,6 @@ namespace TheMoon {
 
             // random jump
             animator.SetTrigger("Jump");
-            
 
         }
 
@@ -37,7 +36,6 @@ namespace TheMoon {
             if(other.CompareTag("NPCDestroyer")) {
                 Destroy(gameObject);
             }
-
         }
     }
 }
