@@ -21,14 +21,14 @@ namespace TheMoon {
         /// <summary>
         /// Short wrapper for coupling game progression to entity spawning.
         /// </summary>
-        public void SpawnEntity() {
-            SpawnEntity(Mathf.Clamp(GameManager.instance.dayAndNight.progression + .1f, .0f, .8f));
+        public NPCController SpawnEntity() {
+            return SpawnEntity(Mathf.Clamp(GameManager.instance.dayAndNight.progression + .1f, .0f, .8f));
         }
 
         /// <summary>
         /// Spawns an entity and uses the progress to calculate speed up and stuff.
         /// </summary>
-        public void SpawnEntity(float gameProgress) {
+        public NPCController SpawnEntity(float gameProgress) {
 
             GameObject newlySpawned = Instantiate(spawnable);
 
@@ -43,6 +43,8 @@ namespace TheMoon {
             // set rotation and position according to this GO
             newlySpawned.transform.position = transform.position;
             newlySpawned.transform.rotation = transform.rotation;
+
+            return controller;
 
         }
 

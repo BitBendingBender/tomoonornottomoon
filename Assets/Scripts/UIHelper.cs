@@ -12,7 +12,7 @@ namespace TheMoon {
 
         public AnimationCurve curveForFade;
 
-        protected VisualElement fadingText, fadingTextGameOver, mainContainer, livesContainer;
+        protected VisualElement fadingText, fadingTextGameOver, mainContainer, livesContainer, titleScreen, howToButton, backButton;
 
         protected TextElement pointsText, gameOverText;
 
@@ -26,6 +26,15 @@ namespace TheMoon {
             livesContainer = document.rootVisualElement.Q("lives-container");
             pointsText = document.rootVisualElement.Q<TextElement>("points");
             gameOverText = document.rootVisualElement.Q<TextElement>("final-score");
+            titleScreen = document.rootVisualElement.Q("title-screen");
+
+            document.rootVisualElement.Q("how-to-play").RegisterCallback<ClickEvent>((ClickEvent clickEvent) => {
+                titleScreen.AddToClassList("how-to-active");
+            });
+
+            document.rootVisualElement.Q("back-to-start").RegisterCallback<ClickEvent>((ClickEvent clickEvent) => {
+                titleScreen.RemoveFromClassList("how-to-active");
+            });
 
         }
 
@@ -34,7 +43,11 @@ namespace TheMoon {
             // lets see how we can do this only when state X
             // maybe we can use GameManagerState?
             // Or Should we rather duplicate the state? But that doesnt make sense to me.
-            fadingText.style.opacity = curveForFade.Evaluate(Time.time);
+            if(!titleScreen.ClassListContains("how-to-active")) {
+                fadingText.style.opacity = curveForFade.Evaluate(Time.time);
+            } else if(fadingText.style.opacity.value > 0f && titleScreen.ClassListContains("how-to-active")) {
+                fadingText.style.opacity = fadingText.style.opacity.value - 0.01f;
+            }
             fadingTextGameOver.style.opacity = curveForFade.Evaluate(Time.time);
 
         }

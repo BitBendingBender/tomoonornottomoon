@@ -3,6 +3,41 @@
     font-size: 16px;
 }
 
+
+#how-to,
+#back-to-start {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#back-to-start,
+#how-to-play {
+    font-size: 26px;
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    translate: -50% 0;
+}
+
+#back-to-start:hover,
+#how-to-play:hover {
+    opacity: 0.5;
+}
+
+#title-screen.how-to-active #title-container,
+#title-screen.how-to-active #start-game,
+#title-screen.how-to-active #how-to-play {
+    opacity: 0 !important;
+}
+
+#title-screen.how-to-active #how-to,
+#title-screen.how-to-active #back-to-start {
+    opacity: 1;
+    visibility: visible;
+}
+
 .state-menu #title-screen {
     opacity: 1;
 }

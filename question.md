@@ -4,3 +4,4 @@
 * Better way of using Coroutines?
 * Ask Goran about EventSystem. Do they actually use it? Does it make sense taking the time to implement in comparison to close coupling?
 * Does it make sense to keep fields protected / private but serialized?
+* Falls Texturen ein Problem einfach ersetzen mit Farben lol.

@@ -23,6 +23,10 @@ namespace TheMoon {
         [SerializeField]
         AnimationCurve spawnSpeedUpCurve;
 
+        public int maximumTimePowerUps;
+
+        protected int timePowerUpsSpawned;
+
         // on start, we invoke spawning
         void OnEnable() {
             StartCoroutine(Spawn());
@@ -61,9 +65,28 @@ namespace TheMoon {
                 NPCSpawner randomSelected = spawners[Random.Range(0, spawners.Count)];
 
                 // SPAWN!
-                randomSelected.SpawnEntity();
+                NPCController newlySpawned = randomSelected.SpawnEntity();
+
+                if(GameManager.instance.currentGameState == GameState.InGame) {
+
+                    // TODO: Split complete time into maximum time power ups and then between that time, spawn a random entity
+                    float rand = Random.Range(0f, 1f);
+
+                    // theres a 5% chance a time power up npc spawns
+                    if(timePowerUpsSpawned < maximumTimePowerUps && rand <= 0.05f) {
+                        timePowerUpsSpawned++;
+                        newlySpawned.SetToTimePowerUp();
+                    } 
+
+                    // give a 7.5% chance to spawn a cop
+                    if(rand > 0.05f && rand <= 0.125f) {
+                        newlySpawned.SetToCop();
+                    }
+
+                }
 
             }
         }
+
     }
 }

@@ -87,8 +87,10 @@ namespace TheMoon {
                 Debug.LogError("An Object without NPCController was hit. That's simply impossible.");
             }
 
-            // bail if no hits
-            if(!hasHit || npc.beenHit) {
+            // bail if no hits or if cop
+            if(npc.beenHit || npc.IsCop()) {
+
+                npc.beenHit = true;
                 
                 newHit.GetComponent<HitController>().SetTexture(HitController.TextureType.Duh);
                 RemoveLive();
@@ -111,7 +113,6 @@ namespace TheMoon {
             } else if(calculatedPoints >= 50) {
                 calculatedPoints = 75;
                 newHit.GetComponent<HitController>().SetTexture(HitController.TextureType.Nice);
-                calculatedPoints = 50;
             } else if(calculatedPoints >= 25) {
                 calculatedPoints = 50;
                 newHit.GetComponent<HitController>().SetTexture(HitController.TextureType.Okay);
@@ -121,6 +122,12 @@ namespace TheMoon {
             }
             
             UpdatePoints(calculatedPoints);
+
+            // if the NPC Controller is time power up, count back time
+            if(npc.IsTimePowerUp()) {
+                npc.SetToTimePowerUp(false);
+                GameManager.instance.currentGameTime -= 10f;
+            }
 
         }
 

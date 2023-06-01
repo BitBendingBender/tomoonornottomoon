@@ -437,8 +437,8 @@ MonoBehaviour:
   spawners: []
   startSpawnSpeed: 5
   minimumSpawnSpeed: 2
-  maximumSpeedAfterSeconds: 60
-  spawnSpeed: 5
+  maximumSpeedAfterSeconds: 15
+  spawnSpeed: 4.5
   timeSinceSpawnStart: 0
   spawnSpeedUpCurve:
     serializedVersion: 2
@@ -464,6 +464,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  maximumTimePowerUps: 5
 --- !u!1 &168987724
 GameObject:
   m_ObjectHideFlags: 0
@@ -3330,7 +3331,7 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.050476074
+      time: 0.07825197
       value: 0.7640397
       inSlope: 0
       outSlope: 0
@@ -3339,7 +3340,16 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.054283693
+      time: 0.07908361
+      value: 0.5129106
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.20766574
       value: 0.51403975
       inSlope: 0
       outSlope: 0
@@ -3348,16 +3358,7 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.1908018
-      value: 0.51403975
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.1932056
+      time: 0.21006954
       value: 0.26403973
       inSlope: 0
       outSlope: 0
@@ -4492,7 +4493,7 @@ MonoBehaviour:
   spawnController: {fileID: 167532573}
   dayAndNight: {fileID: 840295615}
   currentGameTime: 0
-  maximumGameTime: 180
+  maximumGameTime: 60
 --- !u!4 &1319209437
 Transform:
   m_ObjectHideFlags: 0
