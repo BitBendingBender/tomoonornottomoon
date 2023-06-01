@@ -7,6 +7,7 @@ namespace TheMoon {
     public class NPCSkater : NPCController
     {
 
+        // should not be accessible from outside.
         [SerializeField]
         protected Animator animator;
 
@@ -19,6 +20,9 @@ namespace TheMoon {
             Move();
         }
 
+        /// <summary>
+        /// Let's skaters do a random fucking Ollie Yeeeeeahhh!
+        /// </summary>
         IEnumerator RandomJump() {
 
             float randomTime = Random.Range(1f, 3f);
@@ -30,7 +34,10 @@ namespace TheMoon {
 
         }
 
-        // Kills the NPC
+        /// <summary>
+        /// Currently destroy when entering. Entity pooling could be a better solution.
+        /// Maybe for another project where infinite amounts of critters are spawned.
+        /// </summary>
         void OnTriggerEnter(Collider other) {
 
             if(other.CompareTag("NPCDestroyer")) {

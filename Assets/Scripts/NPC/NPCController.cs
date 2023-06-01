@@ -13,10 +13,11 @@ namespace TheMoon {
 
         public GameObject timeEmitter;
         public GameObject copHat;
-
         // this is not used here but in the spawner to update speed by game progress
         public float maxSpeedUp;
 
+        // these two properties could be managed better
+        // but who cares anyway 
         bool isTimePowerup;
 
         bool isCop;

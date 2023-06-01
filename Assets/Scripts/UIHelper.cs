@@ -20,6 +20,7 @@ namespace TheMoon {
 
         void Awake() {
 
+            // get references. is a bit tedious but in web-dev it's no different
             fadingText = document.rootVisualElement.Q("start-game");
             fadingTextGameOver = document.rootVisualElement.Q("restart-game");
             mainContainer = document.rootVisualElement.Q("main-container");
@@ -142,6 +143,5 @@ namespace TheMoon {
                 pointsText.text = points.ToString("D");
             }
         } 
-
     }
 }

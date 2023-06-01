@@ -16,13 +16,12 @@ namespace TheMoon {
 
         InputActions actions;
 
-        protected int points, lives = 3;
-
         public GameObject hitContainer;
 
         public GameObject hitPrefab;
 
         public int moontasticHit;
+        protected int points, lives = 3;
 
         // TODO: remodel this curve, or simply remove it.
         [SerializeField]
@@ -36,6 +35,9 @@ namespace TheMoon {
 
         }
 
+        /// <summary>
+        /// Delays player activation after opening menu
+        /// </summary>
         public IEnumerator InitializePlayer() {
 
             points = 0;

@@ -108,6 +108,10 @@ namespace TheMoon {
 
         }
 
+        /// <summary>
+        /// When game overing because of no more lives, pressing spaces immediately triggers restart.
+        /// TODO: Is there a possibility to callback in next frame?
+        /// </summary>
         public IEnumerator LateGameOverEnabling() {
             yield return new WaitForSeconds(1f);
             inputManager.gameover.Enable();
@@ -134,9 +138,9 @@ namespace TheMoon {
         
     }
 
-    /*
-    * This a bit hacky.
-    */
+    /// <summary>
+    /// Possible gamestates.
+    /// </summary>
     public enum GameState {
         Menu,
         InGame,

@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace TheMoon  {
 
-
     /// <summary>
     /// Adds a bit of camera movement. So it's a little more dynamic.
     /// </summary>

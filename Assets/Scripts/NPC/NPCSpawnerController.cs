@@ -15,8 +15,7 @@ namespace TheMoon {
 
         public float maximumSpeedAfterSeconds;
 
-        [SerializeField]
-        float spawnSpeed;
+        public float spawnSpeed;
 
         public float timeSinceSpawnStart = 0f;
 
@@ -47,7 +46,10 @@ namespace TheMoon {
 
         }
 
-
+        /// <summary>
+        /// This IENumerator spawns entities on all connected Spawners.
+        /// This way, the controller can randomly choose a spawner.
+        /// </summary>
         IEnumerator Spawn() {
             
             // this wile loop looks INSANLY weird.
@@ -65,7 +67,7 @@ namespace TheMoon {
                 NPCSpawner randomSelected = spawners[Random.Range(0, spawners.Count)];
 
                 // SPAWN!
-                NPCController newlySpawned = randomSelected.SpawnEntity();
+                NPCController nwelySpawned = randomSelected.SpawnEntity();
 
                 if(GameManager.instance.currentGameState == GameState.InGame) {
 
@@ -75,12 +77,12 @@ namespace TheMoon {
                     // theres a 5% chance a time power up npc spawns
                     if(timePowerUpsSpawned < maximumTimePowerUps && rand <= 0.05f) {
                         timePowerUpsSpawned++;
-                        newlySpawned.SetToTimePowerUp();
+                        nwelySpawned.SetToTimePowerUp();
                     } 
 
                     // give a 7.5% chance to spawn a cop
                     if(rand > 0.05f && rand <= 0.125f) {
-                        newlySpawned.SetToCop();
+                        nwelySpawned.SetToCop();
                     }
 
                 }

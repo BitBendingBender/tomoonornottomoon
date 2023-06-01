@@ -5566,7 +5566,7 @@ MonoBehaviour:
   speed: 3
   beenHit: 0
   timeEmitter: {fileID: 1619391487206169870}
-  copHat: {fileID: 8363178221908627189}
+  copHat: {fileID: 616086498882089897}
   maxSpeedUp: 2
 --- !u!65 &8363178222031759775
 BoxCollider:

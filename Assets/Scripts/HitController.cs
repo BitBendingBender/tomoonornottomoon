@@ -13,11 +13,11 @@ namespace TheMoon {
         [SerializeField]
         protected AnimationCurve curve;
     
-        float tStart = 0f;
+        protected float tStart = 0f;
 
-        Vector3 startPos;
+        protected Vector3 startPos;
 
-        Renderer meshRenderer;
+        protected Renderer meshRenderer;
 
         public enum TextureType {
             Moontastic,
